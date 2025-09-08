@@ -1,0 +1,16 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+venv/
+
+# Encrypted storage
+storage.json
+
+# IDE files
+.vscode/
+
+# macOS
+.DS_Store
+
