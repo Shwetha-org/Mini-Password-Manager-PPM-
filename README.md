@@ -33,8 +33,16 @@ Python-based personal password manager with AES encryption and master key authen
 4. **Run the Project**
    ```bash
    python main.py
+   ```
+   Follow prompts to:
+   - Add a new account and password
+   - Retrieve stored passwords
 
 ### Notes for Users
 - Keep `storage.json` empty initially; the program will populate it with encrypted data automatically.  
 - **Important:** Do not commit real passwords to this repository. This project is meant for testing and learning purposes only.  
 - `.gitignore` is configured to exclude sensitive files like `storage.json` and the virtual environment folder (`venv/`).  
+
+##License
+This project is licensed under the MIT License.
+See the `LICENSE` file for details.
