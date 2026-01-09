@@ -1,13 +1,17 @@
 # Mini Password Manager (PPM)
-Python-based personal password manager with AES encryption and master key authentication. 
 
-##Features
-- AES-256 encyrption for secure password storage
-- Master Password Authentication
-- Storing and Retrieving usernames & passwords
-- Command-Line Interface
+Python-based personal password manager with master password protection and encrypted credential storage using the `cryptography` library.
 
-##Setup
+
+## Features
+- Master password authentication with PBKDF2-derived encryption keys (SHA-256,100k iterations).
+- Encrypted password storage using the `cryptography` library's Fernet symmetric encryption (AES + HMAC).
+- Add, retrieve, update, and delete stored usernames & passwords.
+- Support for multiple accounts per service with an interactive selection in the CLI.
+- Command-line interface to list all stored services and associated usernames.
+- Change master password command that safely re-encrypts all existing entries with the new key.
+
+## Setup
 1. **Clone the repository**
    ```bash
    git clone https://github.com/Shwetha-org/Mini-Password-Manager-PPM-.git
@@ -34,9 +38,11 @@ Python-based personal password manager with AES encryption and master key authen
    ```bash
    python main.py
    ```
-   Follow prompts to:
-   - Add a new account and password
-   - Retrieve stored passwords
+   Follow the prompts to:
+   - Set up or log in with a master password.
+   - Add new accounts and passwords.
+   - Retrieve, update, or delete stored passwords.
+   - Change the master password.
 
 ### Notes for Users
 - Keep `storage.json` empty initially; the program will populate it with encrypted data automatically.  
